@@ -1429,9 +1429,13 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Mechanical:MountingHole"
+		(symbol "Mechanical:MountingHole_Pad"
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 1.016)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom no)
@@ -1439,7 +1443,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "H"
-				(at 0 5.08 0)
+				(at 0 6.35 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -1448,8 +1452,8 @@
 					)
 				)
 			)
-			(property "Value" "MountingHole"
-				(at 0 3.175 0)
+			(property "Value" "MountingHole_Pad"
+				(at 0 4.445 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -1480,7 +1484,7 @@
 					)
 				)
 			)
-			(property "Description" "Mounting Hole without connection"
+			(property "Description" "Mounting Hole with connection"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1502,7 +1506,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "MountingHole*"
+			(property "ki_fp_filters" "MountingHole*Pad*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1513,9 +1517,9 @@
 					)
 				)
 			)
-			(symbol "MountingHole_0_1"
+			(symbol "MountingHole_Pad_0_1"
 				(circle
-					(center 0 0)
+					(center 0 1.27)
 					(radius 1.27)
 					(stroke
 						(width 1.27)
@@ -1523,6 +1527,26 @@
 					)
 					(fill
 						(type none)
+					)
+				)
+			)
+			(symbol "MountingHole_Pad_1_1"
+				(pin input line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
 					)
 				)
 			)
@@ -2226,6 +2250,12 @@
 		(uuid "41f96bcf-e4bb-45e3-a337-b32e4f5e311d")
 	)
 	(junction
+		(at 74.93 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4a41ca49-f4c2-4d8a-a985-221feae14013")
+	)
+	(junction
 		(at 144.78 153.67)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2305,6 +2335,16 @@
 	)
 	(wire
 		(pts
+			(xy 62.23 88.9) (xy 63.5 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1069a6b9-ab23-446a-b7d7-caba59e3b943")
+	)
+	(wire
+		(pts
 			(xy 146.05 101.6) (xy 144.78 101.6)
 		)
 		(stroke
@@ -2355,7 +2395,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 93.98) (xy 71.12 93.98)
+			(xy 50.8 93.98) (xy 63.5 93.98)
 		)
 		(stroke
 			(width 0)
@@ -2395,6 +2435,16 @@
 	)
 	(wire
 		(pts
+			(xy 62.23 88.9) (xy 62.23 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a545186-75b4-4ce3-870f-7944236de6fe")
+	)
+	(wire
+		(pts
 			(xy 88.9 142.24) (xy 82.55 142.24)
 		)
 		(stroke
@@ -2415,6 +2465,16 @@
 	)
 	(wire
 		(pts
+			(xy 254 137.16) (xy 254 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "489a2b66-2078-4ab6-93a8-02427f9b3b8d")
+	)
+	(wire
+		(pts
 			(xy 144.78 154.94) (xy 144.78 153.67)
 		)
 		(stroke
@@ -2432,16 +2492,6 @@
 			(type default)
 		)
 		(uuid "52e060d2-4bd4-4385-a456-0a8b8e253744")
-	)
-	(wire
-		(pts
-			(xy 69.85 102.87) (xy 69.85 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "535ebb4e-5252-4af7-99fb-dc94b32c929a")
 	)
 	(wire
 		(pts
@@ -2475,13 +2525,13 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 87.63) (xy 69.85 88.9)
+			(xy 63.5 91.44) (xy 57.15 91.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "611b1f89-8f89-4c1a-81b7-d77a2b4a3b5f")
+		(uuid "626a3951-5b4a-40b2-8538-ead72afea898")
 	)
 	(wire
 		(pts
@@ -2515,13 +2565,23 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 88.9) (xy 71.12 88.9)
+			(xy 74.93 55.88) (xy 74.93 63.5)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "7115e900-f96e-4890-a487-8eb3b6f67200")
+		(uuid "71621f07-8262-4081-805f-3b08948c187d")
+	)
+	(wire
+		(pts
+			(xy 74.93 55.88) (xy 76.2 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7dca9f3f-6b50-47ea-9b13-9001d30bc9a1")
 	)
 	(wire
 		(pts
@@ -2545,13 +2605,13 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 91.44) (xy 71.12 91.44)
+			(xy 254 118.11) (xy 254 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8d6f5966-e135-4d4a-8ff3-ea73440633bd")
+		(uuid "8d6ac65e-6f1c-45a2-b083-75fdcca12521")
 	)
 	(wire
 		(pts
@@ -2645,6 +2705,16 @@
 	)
 	(wire
 		(pts
+			(xy 69.85 58.42) (xy 69.85 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5ca5bf7-7760-44c0-a834-cbcbe8d5ac30")
+	)
+	(wire
+		(pts
 			(xy 133.35 142.24) (xy 139.7 142.24)
 		)
 		(stroke
@@ -2675,6 +2745,16 @@
 	)
 	(wire
 		(pts
+			(xy 57.15 91.44) (xy 57.15 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0380d0f-9b27-4fe0-b5dd-41c32621eb48")
+	)
+	(wire
+		(pts
 			(xy 113.03 96.52) (xy 114.3 96.52)
 		)
 		(stroke
@@ -2702,6 +2782,16 @@
 			(type default)
 		)
 		(uuid "c718250b-4d8e-42d0-a196-8fc0f174fa48")
+	)
+	(wire
+		(pts
+			(xy 228.6 118.11) (xy 228.6 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c7f0418a-4a27-4d5e-b919-a51ce4265a6e")
 	)
 	(wire
 		(pts
@@ -2775,7 +2865,37 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 96.52) (xy 71.12 96.52)
+			(xy 74.93 63.5) (xy 74.93 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd9bbe88-4c18-4d2d-9576-48d44238afaa")
+	)
+	(wire
+		(pts
+			(xy 76.2 58.42) (xy 69.85 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df00e9b3-f079-4fc6-8ff9-34032cd336f4")
+	)
+	(wire
+		(pts
+			(xy 63.5 60.96) (xy 76.2 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4229c19-f882-42da-a32a-f83f1b8dd7a2")
+	)
+	(wire
+		(pts
+			(xy 50.8 96.52) (xy 63.5 96.52)
 		)
 		(stroke
 			(width 0)
@@ -2802,6 +2922,26 @@
 			(type default)
 		)
 		(uuid "ea6982b1-ea7e-48a8-967d-ac0102591002")
+	)
+	(wire
+		(pts
+			(xy 74.93 63.5) (xy 76.2 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb501124-93e6-4877-8cd3-cb112646e990")
+	)
+	(wire
+		(pts
+			(xy 228.6 137.16) (xy 228.6 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd15fdd1-aba9-4b80-9484-927293b8793a")
 	)
 	(label "SCL"
 		(at 127 147.32 0)
@@ -2863,8 +3003,18 @@
 		)
 		(uuid "57d07e47-2519-4381-8a2e-8a9d3010a587")
 	)
+	(label "~{INT}"
+		(at 63.5 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5d78adc1-bb8b-419d-b90c-a59332ee5409")
+	)
 	(label "SCL"
-		(at 58.42 96.52 0)
+		(at 50.8 96.52 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2894,7 +3044,7 @@
 		(uuid "bc85c90c-655b-463f-8c2a-668c1c887c46")
 	)
 	(label "SDA"
-		(at 58.42 93.98 0)
+		(at 50.8 93.98 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2902,6 +3052,84 @@
 			(justify left bottom)
 		)
 		(uuid "ed821227-28f5-4d62-8e2a-c30f349ae7b1")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 228.6 138.43 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "010299c0-88d8-464e-8887-75ac2b41a925")
+		(property "Reference" "#PWR018"
+			(at 228.6 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 228.6 143.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 228.6 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 228.6 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 228.6 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9b6458cb-6354-4d81-8d4f-8994b5188a80")
+		)
+		(instances
+			(project "Apus"
+				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
+					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -2915,7 +3143,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "05a9ba04-9694-4fa9-acee-cd96deb9a451")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR010"
 			(at 146.05 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -2975,7 +3203,7 @@
 		(instances
 			(project "Apus"
 				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
-					(reference "#PWR08")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -2993,7 +3221,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "135eeb07-5187-42b6-b138-568cea7daf25")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR015"
 			(at 146.05 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -3053,7 +3281,7 @@
 		(instances
 			(project "Apus"
 				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
-					(reference "#PWR013")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -3071,7 +3299,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1c35f46e-fe11-4933-a71b-1e4c61b16727")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR023"
 			(at 144.78 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -3131,7 +3359,7 @@
 		(instances
 			(project "Apus"
 				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
-					(reference "#PWR017")
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -3139,7 +3367,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 69.85 102.87 0)
+		(at 62.23 102.87 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3149,8 +3377,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1e26ca1d-4874-4e05-add0-bd69acbf2bdb")
-		(property "Reference" "#PWR012"
-			(at 69.85 109.22 0)
+		(property "Reference" "#PWR014"
+			(at 62.23 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3161,7 +3389,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 69.85 107.95 0)
+			(at 62.23 107.95 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3171,7 +3399,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 69.85 102.87 0)
+			(at 62.23 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3182,7 +3410,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 69.85 102.87 0)
+			(at 62.23 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3193,7 +3421,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 69.85 102.87 0)
+			(at 62.23 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3209,7 +3437,7 @@
 		(instances
 			(project "Apus"
 				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
-					(reference "#PWR012")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -3227,7 +3455,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "23b57574-160d-400b-9b8c-3ca88c94ea3d")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR05"
 			(at 140.97 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -3287,48 +3515,47 @@
 		(instances
 			(project "Apus"
 				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
-					(reference "#PWR04")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 203.2 139.7 0)
+		(lib_id "power:GND")
+		(at 254 138.43 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "26812f1e-5d0a-4ec1-bbc4-cd0f9599cd14")
-		(property "Reference" "H3"
-			(at 205.74 138.4299 0)
+		(uuid "27aaf1aa-a1a0-46f7-8a8f-f43641e1ea00")
+		(property "Reference" "#PWR019"
+			(at 254 144.78 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "MountingHole"
-			(at 205.74 140.9699 0)
+		(property "Value" "GND"
+			(at 254 143.51 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 203.2 139.7 0)
+		(property "Footprint" ""
+			(at 254 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3339,7 +3566,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 203.2 139.7 0)
+			(at 254 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3349,8 +3576,8 @@
 				)
 			)
 		)
-		(property "Description" "Mounting Hole without connection"
-			(at 203.2 139.7 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 254 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3359,11 +3586,14 @@
 					(size 1.27 1.27)
 				)
 			)
+		)
+		(pin "1"
+			(uuid "91c59e77-6c8c-4312-80b6-4794ca2e3dca")
 		)
 		(instances
 			(project "Apus"
 				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
-					(reference "H3")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -3448,6 +3678,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 228.6 115.57 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3f6296b9-a0ac-41a2-beac-1af5cf3a5987")
+		(property "Reference" "H1"
+			(at 231.14 113.0299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 231.14 115.5699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
+			(at 228.6 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 228.6 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 228.6 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7e716ed1-c0ff-4c27-adfe-2d2526fec177")
+		)
+		(instances
+			(project "Apus"
+				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
+					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Jumper:SolderJumper_3_Bridged123")
 		(at 163.83 69.85 180)
 		(unit 1)
@@ -3479,7 +3788,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm_NumberLabels"
+		(property "Footprint" "Jumper:SolderJumper-3_P1.3mm_Bridged123_RoundedPad1.0x1.5mm_NumberLabels"
 			(at 163.83 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -3525,6 +3834,172 @@
 			(project "Apus"
 				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
 					(reference "JP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 69.85 57.15 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "44b661cb-7fb5-49c1-8f2d-ab138ef3a034")
+		(property "Reference" "#PWR04"
+			(at 69.85 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 69.85 52.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 69.85 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 69.85 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 69.85 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3f4800bb-a8b7-4fec-841e-d6deb0cd1126")
+		)
+		(instances
+			(project "Apus"
+				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 68.58 91.44 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4517fd59-b1b5-4447-926c-312cafab4cae")
+		(property "Reference" "J2"
+			(at 71.12 91.4399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x04"
+			(at 71.12 93.9799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+			(at 68.58 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 68.58 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 68.58 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8f546698-def3-4390-bdc2-2d2bfdb7d645")
+		)
+		(pin "3"
+			(uuid "8657dc9f-a916-428d-9705-cad72af3285b")
+		)
+		(pin "4"
+			(uuid "040c271e-1abb-47da-a791-40b20f892b0e")
+		)
+		(pin "2"
+			(uuid "5635df9c-6be6-4fc1-b871-7ac318de5293")
+		)
+		(instances
+			(project "Apus"
+				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -3613,82 +4088,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 203.2 127 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5e9562bc-f777-4d52-bf0a-36c00a35fc0e")
-		(property "Reference" "H1"
-			(at 205.74 125.7299 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MountingHole"
-			(at 205.74 128.2699 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 203.2 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 203.2 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Mounting Hole without connection"
-			(at 203.2 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "Apus"
-				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
-					(reference "H1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:PWR_FLAG")
 		(at 78.74 36.83 0)
 		(unit 1)
@@ -3768,7 +4167,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 69.85 87.63 0)
+		(at 57.15 90.17 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3778,8 +4177,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6a88aeda-d4a8-47b1-a977-5389511150d6")
-		(property "Reference" "#PWR09"
-			(at 69.85 91.44 0)
+		(property "Reference" "#PWR011"
+			(at 57.15 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3790,7 +4189,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 69.85 82.55 0)
+			(at 57.15 85.09 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3800,7 +4199,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 69.85 87.63 0)
+			(at 57.15 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3811,7 +4210,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 69.85 87.63 0)
+			(at 57.15 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3822,7 +4221,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 69.85 87.63 0)
+			(at 57.15 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3838,7 +4237,86 @@
 		(instances
 			(project "Apus"
 				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
-					(reference "#PWR09")
+					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 254 115.57 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6efe249d-c386-4be0-b1e2-164ad9a50541")
+		(property "Reference" "H2"
+			(at 256.54 113.0299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 256.54 115.5699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
+			(at 254 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 254 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 254 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6eb104f6-6736-4329-a8fc-4b0dcc476b7b")
+		)
+		(instances
+			(project "Apus"
+				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
+					(reference "H2")
 					(unit 1)
 				)
 			)
@@ -4005,94 +4483,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x04")
-		(at 76.2 91.44 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "76a1fbf7-8651-44d7-83b3-954d44cd074c")
-		(property "Reference" "J1"
-			(at 78.74 91.4399 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Conn_01x04"
-			(at 78.74 93.9799 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
-			(at 76.2 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 76.2 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 76.2 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "3a8f24f4-a3a2-4d0f-bef3-d00362b50bff")
-		)
-		(pin "1"
-			(uuid "423a9116-fdf0-4f1b-8e57-b604c6a97565")
-		)
-		(pin "3"
-			(uuid "c245c473-3c9e-474b-9159-6ea6a99546ca")
-		)
-		(pin "4"
-			(uuid "5db1cc70-5266-4403-984f-ce734efc64a1")
-		)
-		(instances
-			(project "Apus"
-				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
-					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector_Generic_MountingPin:Conn_01x04_MountingPin")
 		(at 93.98 142.24 0)
 		(unit 1)
@@ -4104,7 +4494,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "76c0c9bb-8134-4f2f-bf4d-955b99142c59")
-		(property "Reference" "J2"
+		(property "Reference" "J3"
 			(at 96.52 142.5955 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4177,7 +4567,7 @@
 		(instances
 			(project "Apus"
 				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
-					(reference "J2")
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -4277,7 +4667,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "86386cd2-8f39-411d-a587-49dc3e16a11c")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR022"
 			(at 93.98 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -4337,7 +4727,7 @@
 		(instances
 			(project "Apus"
 				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
-					(reference "#PWR016")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -4355,7 +4745,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "88c57eda-a611-42fe-84a7-66627519105d")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR07"
 			(at 163.83 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -4415,48 +4805,47 @@
 		(instances
 			(project "Apus"
 				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
-					(reference "#PWR05")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 203.2 146.05 0)
+		(lib_id "power:GND")
+		(at 228.6 119.38 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "8b9e0a5e-73c9-4cf2-b027-9caf399070d2")
-		(property "Reference" "H4"
-			(at 205.74 144.7799 0)
+		(uuid "8d5902c4-9044-45a4-8d38-99e7fe259083")
+		(property "Reference" "#PWR016"
+			(at 228.6 125.73 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "MountingHole"
-			(at 205.74 147.3199 0)
+		(property "Value" "GND"
+			(at 228.6 124.46 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 203.2 146.05 0)
+		(property "Footprint" ""
+			(at 228.6 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4467,7 +4856,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 203.2 146.05 0)
+			(at 228.6 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4477,8 +4866,8 @@
 				)
 			)
 		)
-		(property "Description" "Mounting Hole without connection"
-			(at 203.2 146.05 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 228.6 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4487,11 +4876,14 @@
 					(size 1.27 1.27)
 				)
 			)
+		)
+		(pin "1"
+			(uuid "2984a8c5-bfd3-4258-991f-ff55478fdbc4")
 		)
 		(instances
 			(project "Apus"
 				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
-					(reference "H4")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -4509,7 +4901,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8ee95923-b2f1-42e4-bbbd-4d380f0b566b")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR012"
 			(at 113.03 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -4569,7 +4961,7 @@
 		(instances
 			(project "Apus"
 				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
-					(reference "#PWR010")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -4762,7 +5154,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9c953536-0507-4609-827e-400dd0008945")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR013"
 			(at 203.2 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -4822,7 +5214,7 @@
 		(instances
 			(project "Apus"
 				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
-					(reference "#PWR011")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -5133,6 +5525,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 74.93 64.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b839afce-269f-44fa-b1f7-bfc7563a7eae")
+		(property "Reference" "#PWR06"
+			(at 74.93 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 74.93 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 74.93 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 74.93 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 74.93 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "25bf43d2-8e6e-461c-b38b-3b0eb1f923d8")
+		)
+		(instances
+			(project "Apus"
+				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
+					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 133.35 140.97 0)
 		(unit 1)
@@ -5144,7 +5614,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c277ae44-d849-4da8-9aaf-9326cc8362a9")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR021"
 			(at 133.35 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -5204,7 +5674,7 @@
 		(instances
 			(project "Apus"
 				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
-					(reference "#PWR015")
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -5222,7 +5692,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c5c50191-afdd-410c-ba96-fff84f2ea90d")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR020"
 			(at 82.55 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -5282,7 +5752,7 @@
 		(instances
 			(project "Apus"
 				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
-					(reference "#PWR014")
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -5371,6 +5841,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 254 119.38 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c817da39-f130-4c96-b280-d4dd45461f3e")
+		(property "Reference" "#PWR017"
+			(at 254 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 254 124.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 254 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 254 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 254 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7a0c1026-3f40-4f3f-8474-496dede25368")
+		)
+		(instances
+			(project "Apus"
+				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
+					(reference "#PWR017")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 203.2 69.85 0)
 		(unit 1)
@@ -5382,7 +5930,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d17b2d0a-23ad-4cd8-b2f1-d5fb8fcfa60c")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR08"
 			(at 203.2 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -5442,7 +5990,7 @@
 		(instances
 			(project "Apus"
 				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
-					(reference "#PWR06")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -5538,7 +6086,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e32dd80f-1862-4eb5-a5b3-9d98e8aa6d00")
-		(property "Reference" "J3"
+		(property "Reference" "J4"
 			(at 147.32 142.5955 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5611,7 +6159,95 @@
 		(instances
 			(project "Apus"
 				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
-					(reference "J3")
+					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 81.28 58.42 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e7a083e7-5937-4f95-bbc5-2709ad1a68de")
+		(property "Reference" "J1"
+			(at 83.82 58.4199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x04"
+			(at 83.82 60.9599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+			(at 81.28 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 81.28 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 81.28 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cc742b32-f23a-4abc-9933-4e7b16e3c1f4")
+		)
+		(pin "3"
+			(uuid "fa256e71-1b72-4fc4-99d1-2b1dbc09e94f")
+		)
+		(pin "4"
+			(uuid "0c38b7b8-cb56-4cd0-8b5a-ae136cd3072d")
+		)
+		(pin "2"
+			(uuid "3b1774a6-7c22-4b7d-ae24-f481464782e8")
+		)
+		(instances
+			(project "Apus"
+				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
+					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -5629,7 +6265,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ef1ec2a2-0a08-44f9-92b5-70d4ecd4c6fa")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR09"
 			(at 254 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -5689,7 +6325,7 @@
 		(instances
 			(project "Apus"
 				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
-					(reference "#PWR07")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -5778,8 +6414,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 203.2 133.35 0)
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 254 134.62 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5788,9 +6424,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "f68d9c7f-e171-4792-bd2e-6f79e5641b5c")
-		(property "Reference" "H2"
-			(at 205.74 132.0799 0)
+		(uuid "f2702020-a243-49ea-bb89-1167672aefa0")
+		(property "Reference" "H4"
+			(at 256.54 132.0799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5800,8 +6436,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MountingHole"
-			(at 205.74 134.6199 0)
+		(property "Value" "MountingHole_Pad"
+			(at 256.54 134.6199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5811,8 +6447,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 203.2 133.35 0)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
+			(at 254 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5823,7 +6459,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 203.2 133.35 0)
+			(at 254 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5833,8 +6469,8 @@
 				)
 			)
 		)
-		(property "Description" "Mounting Hole without connection"
-			(at 203.2 133.35 0)
+		(property "Description" "Mounting Hole with connection"
+			(at 254 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5843,11 +6479,93 @@
 					(size 1.27 1.27)
 				)
 			)
+		)
+		(pin "1"
+			(uuid "7f71486b-e505-4e1c-910b-2390ec476e20")
 		)
 		(instances
 			(project "Apus"
 				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
-					(reference "H2")
+					(reference "H4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 228.6 134.62 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f842c5b2-ac00-4817-b582-fd1630afaa53")
+		(property "Reference" "H3"
+			(at 231.14 132.0799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 231.14 134.6199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
+			(at 228.6 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 228.6 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 228.6 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0d152d24-3ef8-4d99-8495-3905b66df114")
+		)
+		(instances
+			(project "Apus"
+				(path "/5099b96d-ff89-41f5-8045-2c8201a79f0f"
+					(reference "H3")
 					(unit 1)
 				)
 			)
